@@ -19,6 +19,6 @@ app.include_router(comment.router)
 app.include_router(authentication.router)
 models.Base.metadata.create_all(engine) 
 #create the database tables based on the models defined in db/models.py
-origins = ["http://localhost:3000", "https://instaverse-mu.vercel.app/"] #define the allowed origins for CORS (Cross-Origin Resource Sharing) requests
+origins = ["http://localhost:3000", "https://instaverse-mu.vercel.app"] #define the allowed origins for CORS (Cross-Origin Resource Sharing) requests
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"]) #add CORS middleware to the application
 # app.mount("/images", StaticFiles(directory="images"), name="images")
