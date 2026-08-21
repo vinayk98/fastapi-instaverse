@@ -9,10 +9,6 @@ from routers import comment
 from auth import authentication
 app = FastAPI() 
 
-@app.get("")
-def get_message():
-    return "Hello world"
-
 app.include_router(user.router)
 app.include_router(post.router)
 app.include_router(comment.router)
